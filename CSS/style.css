@@ -1,0 +1,1138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a { color: inherit;     text-decoration: none;} 
+
+/******** GENERAL *********/
+
+body {
+    background-color: hwb(222 9% 82%);
+    color:rgba(255, 235, 205, 1);
+    text-align: justify;
+    font-family: 'Varela Round', sans-serif;
+}
+
+head {
+    box-shadow: rgba(22, 22, 22, 0.664);
+}
+
+/******** HEADER *********/
+/******** NAVIGATION *********/
+
+.header {
+    height: 120px; 
+    width: 100%; 
+    background-color: rgba(69, 70, 75, 1);
+    color: blanchedalmond;   
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+}
+
+.dropdown{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.dropdown > ul{
+    padding: 1em; 
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.dropdown > ul > li{
+    background-color: rgb(128, 128, 128);
+    text-align: center;
+    list-style-type: none;
+
+    padding: 20px;
+    margin-top: 10px;
+
+    border-radius: 3em;
+    display: none;
+}
+
+.dropdown > ul:hover > li {
+    display: block;
+}
+
+/**** EN-TÊTE RESPONSIVE TABLET ****/
+@media screen and (max-width: 768px ) {
+   .book{
+       width: 100px;
+       margin-top: 20px;
+   } 
+
+   .dropdown > ul {
+       font-size: 25px;
+   }
+}
+
+
+
+/******** MAIN *********/
+
+
+
+/******** - PAGE HOME - *********/
+
+/******** EN-TÊTE *********/
+
+.mainTete {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    margin-left: 5em;
+    padding: 3em;
+    margin-top: 5em;
+    
+}
+
+.mainTete >h1 {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 14em;
+    
+}
+
+.mainTete>h2 {
+    font-family: 'Almendra Display', cursive;
+    font-size: 45px;
+    margin-top: 5em;
+    margin-left: 2em;
+    animation: slogan 5s ease-out;
+}
+
+@keyframes slogan {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.plateformeTete{
+    display: flex;
+    margin-left: 75em;  
+}
+
+.plateformeTete > a{
+    margin-right: 5em;
+}
+
+/**** EN-TÊTE RESPONSIVE DESKTOP ****/
+@media screen and (max-width: 1024px) { 
+    .mainTete > h2 {
+        margin-right: 50px ;
+        margin-left: -10px;
+        margin-top: 7em ;
+    }
+    
+    .plateformeTete {
+        margin-left: 25em;
+        width: 100%;
+    }
+}
+
+/**** EN-TÊTE RESPONSIVE TABLET ****/
+
+@media screen and (max-width: 768px ) {
+    .mainTete > h1 {
+        font-size: 12em;
+    }
+
+    .mainTete > h2 {
+        margin-right: 70px ;
+        margin-left: -20px;
+        margin-top: 6em ;
+    }
+
+    .plateformeTete {
+        margin-left: 15em;
+        width: 100%;
+    }
+
+}
+
+/******** INTRODUCTION *********/
+
+.introduction{
+    padding: 3em;
+}
+
+.introduction > p{
+    /* width: 520px;
+    height: 150px; */
+    padding: 1em;
+
+    white-space: pre-line;
+    font-size: 20px;
+}
+
+.introP1 {
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+.introP2{
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.introduction > h2{
+    padding: 1em;
+    margin-top: 3em;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Almendra Display', cursive;
+    text-align: center;
+    font-size: 30px;
+    background: rgb(84, 32, 46);
+}
+
+
+/******** BLOCKS *********/
+
+/***** POSITION  *****/
+.block-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/***** IMG CERCLE  *****/
+.block_Supplice {
+    height:250px;
+    width: 250px;
+    margin:10px auto;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    background-image:url(https://zupimages.net/up/22/17/55mu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    box-shadow: 0 0 0 0  rgb(128, 128, 128);
+    animation: pulse 2s infinite;
+    
+}
+
+.block_Mokthar {
+    height:250px;
+    width: 250px;
+    margin:10px auto;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    background-image:url(https://zupimages.net/up/22/17/9ayq.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    box-shadow: 0 0 0 0  rgb(128, 128, 128);
+    animation: pulse 2s infinite;
+    
+}
+
+.block_Heilheim {
+    height:300px;
+    width: 300px;
+    margin:10px auto 0;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    background-image:url(https://zupimages.net/up/22/17/vqop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    box-shadow: 0 0 0 0  rgb(128, 128, 128);
+    animation: pulse 2s infinite;
+}
+
+.block_Saurien{
+    height:250px;
+    width: 250px;
+    margin:10px auto;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    background-image:url(https://zupimages.net/up/22/17/wprq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    box-shadow: 0 0 0 0  rgb(128, 128, 128);
+    animation: pulse 2s infinite;
+    
+}
+
+.block_Melodie {
+    height:250px;
+    width: 250px;
+    margin:10px auto;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    background-image:url(https://zupimages.net/up/22/17/qoqx.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0 0 0 0  rgb(128, 128, 128);
+    animation: pulse 2s infinite;
+    
+}
+
+/***** ANIMATION CSS  *****/
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 18px  rgba(128, 128, 128, 0.01);
+    }
+}
+
+.block_Supplice:hover{
+    transform: scale(1.4);
+    transition: 2s;
+}
+.block_Mokthar:hover{
+    transform: scale(1.4);
+    transition: 2s;
+}
+.block_Heilheim:hover{
+    transform: scale(1.5);
+    transition: 2s;
+}
+.block_Saurien:hover{
+    transform: scale(1.4);
+    transition: 2s;
+}
+.block_Melodie:hover{
+    transform: scale(1.4);
+    transition: 2s;
+}
+
+/******** PRESENTATION *********/
+
+.presentation{
+    padding: 1em;
+    margin-bottom: 4em;
+    text-align: justify;
+}
+
+.presentation > h2{
+    padding-bottom: 1em;
+    
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 5em  ;
+}
+
+.presentation > p{
+    padding: 1em;
+    white-space: pre-line;
+    text-align: justify;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/******** - PAGES - *********/
+/******** TITLE *********/
+
+.MenuH1{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 6em;
+}
+
+
+/******** - PAGE FICHE - *********/
+
+/******** ARTICLE *********/
+.articleFiche > p{
+    padding: 1em;
+    white-space: pre-line;
+    text-align: justify;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/******** IMG *********/
+.divImg{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.divImg > img{
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 2em;
+    margin-top: 3em;
+}
+
+/******** BUTTON *********/
+.btnFiche{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    padding: 2em;
+    padding-bottom: 5em;
+    margin-right: 12em;
+}
+
+.btnFiche > button{
+    padding: 2em;
+}
+
+/**** EN-TÊTE RESPONSIVE DESKTOP ****/
+@media screen and (max-width: 1024px) { 
+    .divImg > img{
+        width: 500px;
+        height: 800px;
+    }
+}
+
+/**** EN-TÊTE RESPONSIVE TABLET ****/
+@media screen and (max-width: 768px ) {
+    .divImg > img{
+        width: 300px;
+        height: 600px;
+    }
+
+}
+
+
+/******** - PAGE MONDE - *********/
+
+/******** SUB MENU *********/
+.subMenu{
+    display: flex;
+    justify-content: center;
+}
+
+.subMenu > ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.subMenu > ul > li{
+    list-style-type: none;
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+    padding: 2em;
+    font-size: 30px;
+}
+
+.subMenu > ul > li > a{
+    border: 3px solid rgb(84, 32, 46);
+    border-radius: 50%;
+    padding: 13px;
+    background: rgba(255, 235, 205, 1);
+    color: rgb(23, 30, 46);
+}
+
+.subMenu > ul > li:hover {
+    transform: scale(1.4);
+    transition: 2s;
+}
+
+/******** SECTION *********/
+.mapSection{
+    padding: 2em;
+}
+.mapSection > h2 , p {
+    display: flex;
+    justify-content: center;
+}
+
+/******** TITLE *********/
+.mapDecoration{
+    display: flex;
+    justify-content: center;
+    padding: 4em;
+}
+
+.mapDecoration > img {
+    border: 4px solid rgb(84, 32, 46);
+    border-radius: 15%;
+
+}
+
+/******** ANIMATION CSS *********/
+.mapDecoration:hover{
+    transform: scale(1.2);
+    transition: 2s;
+}
+
+.mapDecorationQuinze{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding: 4em;
+    
+}
+
+.quinzeMapZoom > img{
+    border: 4px solid rgb(84, 32, 46);
+    border-radius: 15%;
+}
+
+.quinzeMapZoom:hover{
+    transform: scale(1.2);
+    transition: 2s;
+}
+
+/**** CARTE RESPONSIVE TABLET ****/
+@media screen and (min-width: 768px ) and (max-width: 1024px) {
+    .mapDecoration > img {
+        width:700px;
+    }
+    .mapDecoration:hover{
+        transform: none;
+        transition: none;
+    }
+    .mapDecorationQuinze{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 4em;
+    }
+
+    .quinzeMapZoom > img{
+        width: 700px;
+        margin-bottom: 2em;
+    }
+    .quinzeMapZoom:hover{
+        transform: none;
+        transition: none;
+    }
+}
+
+
+/******** - PAGE RELIGION - *********/
+/******** TITLE *********/
+.ReligionH1{
+    text-align: center;
+}
+
+/******** SECTION *********/
+.sectionReligion > h2{
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 5em;
+}
+
+/******** INTRO *********/
+.introReligion{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    white-space: pre-line;
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+}
+
+/******** ARTICLE *********/
+.artReligion{
+    padding: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artReligion > img{
+    border-radius: 5em;
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+/******** DIV *********/
+.divReligion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divReligion > p{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+    white-space: pre-line;
+    font-size: 20px;
+    text-align: center;
+}
+
+/******** IMG SPECIFIQUES *********/
+.imgBetes > img{
+    border-radius: 5em;
+    padding: 1em;
+}
+
+.imgDrow{
+    padding: 3em;
+    
+}
+
+
+/******** - PAGE RACE - *********/
+/******** SOUS-MENU *********/
+.subMenuRace {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-family: 'Almendra Display', cursive;
+    font-family: 30px;
+}
+
+.subMenuRace > ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.subMenuRace > ul > li{
+    list-style-type: none;
+    font-size: 40px;
+    padding: 1em ;
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+}
+
+.subMenuRace > ul > li > a {
+    border: 3px solid rgb(84, 32, 46);
+    border-radius: 50%;
+    padding: 13px;
+    background: rgba(255, 235, 205, 1);
+    color: rgb(23, 30, 46);
+}
+
+.subMenuRace > ul > li:hover {
+    transform: scale(1.4);
+    transition: 2s;
+}
+
+/**** SOUS-MENU RACE RESPONSIVE TABLET ****/
+@media screen and (min-width: 768px ) and (max-width: 1024px) {
+    .subMenuRace > ul > li{
+       font-size: 20px;
+    }
+
+}
+
+/******** ARTICLE *********/
+.artRace{
+    padding: 4em;
+}
+
+.artRace > h2 {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 5em;
+}
+
+.artRace > p {
+    padding: 1em;
+    white-space: pre-line;
+    font-size: 20px;
+    text-align: center;
+}
+
+.artRace > h3 {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 50px;
+    padding-top: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(84, 32, 46);
+}
+
+/******** - PAGE CREATURES HOSTILES - *********/
+/******** INTRO *********/
+.introductionC{
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+}
+
+/******** SECTION *********/
+.sectionCreature{
+    padding: 5em;
+}
+
+/******** TITRE DE L'ARTICLE *********/
+.sectionCreature > h2 {
+    padding: 1em;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 5em;
+    text-align: center;
+}
+
+/******** ARTICLE *********/
+.sectionCreature > .artCreature{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artCreature > img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 50%;
+
+}
+
+.artCreature > p{
+    padding: 2em;
+    text-align: center;
+    font-size: 20px;
+}
+
+.artCreature > .divTemoin{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 2em;
+}
+
+
+/******** - PAGE JDR - *********/
+/******** SECTION *********/
+.sectionJDR{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sectionJDR > h2 {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 5em  ;
+    padding: 0.5em;
+}
+
+/******** ARTICLE *********/
+.artJDR{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5em;
+}
+
+.artJDR > h3 {
+    font-family:'Almendra Display', cursive;
+    padding: 4em;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.artJDR > p{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    white-space: pre-line;
+    font-size: 20px;
+}
+
+/******** LIST *********/
+.ulJDR{
+    display: flex;
+    justify-content: center;
+}
+
+.ulJDR > li {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/******** RESPONSIVE MEDIA TABLET & LAPTOP *********/
+@media screen and (min-width: 768px ) and (max-width: 1024px) {
+    .ulJDR{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    .sectionJDR > h2 {
+        font-family: 'Bilbo Swash Caps', cursive;
+        font-size: 5em  ;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    .MenuH1 {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        font-family: 'Bilbo Swash Caps', cursive;
+        font-size: 6em;
+        text-align: center;
+    }
+}
+
+/******** - PAGE PROFIL - *********/
+/******** INTRO *********/
+.sectionProfil{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.sectionProfil > h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 1em;
+    background: rgb(84, 32, 46);
+    font-family: 'Almendra Display', cursive;
+    border-radius: 50%;
+}
+
+/******** POSITION LIST *********/
+.sectionProfil > .userList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3em;
+    font-size: 30px;
+}
+
+.userList > table > tbody > tr > td{
+    padding: 1em;
+}
+
+/******** LIST *********/
+.userList > h3{
+    padding: 1em;
+    font-size: 50px;
+    font-family: 'Bilbo Swash Caps', cursive;
+    text-align: center;
+}
+
+/******** RESPONSIVE MEDIA TABLET & LAPTOP *********/
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    .userList > table > tbody > tr > td{
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+/******** - PAGE CONNEXION - *********/
+/******** REDIRECTION *********/
+.redirectInscription{
+    padding: 0.9em;
+}
+
+.redirectInscription > p{
+    font-size: 20px;
+    padding: 1em;
+}
+
+/******** LIENS *********/
+.redirectInscription > p > a {
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+    background-color: rgba(255, 235, 205, 1);
+    color: rgb(84, 32, 46);
+    padding: 20px;
+    border-radius: 50% ;
+    border: 1px solid rgb(84, 32, 46);
+}
+
+/******** - PAGE INSCRIPTION - *********/
+.h1Inscription{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/******** - PAGE CONTACT - *********/
+/******** TITLE *********/
+.h1Contact{
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+    font-family: 'Almendra Display', cursive;
+    font-size: 3em;
+}
+/******** FORMULAIRE *********/
+
+.formContact {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 49px;
+}
+
+ form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    font: 1em 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid rgb(153, 153, 153);
+    }
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+button {
+    padding: 1em;
+    border-radius: 5em;
+    margin-left: 15em;
+    margin-top: 2em;
+}
+
+
+/******** PARAGRAPHE N°2  *********/
+.h2Contact{
+    display: flex;
+    justify-content: center;
+    font-family: 'Almendra Display', cursive;
+    font-size: 20px;
+}
+
+/******** LOGOS  *********/
+.logoContact {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin: 50px;
+    padding: 2em;   
+}
+
+.discord :hover{
+    transform: scale(1.3);
+}
+
+.roll20:hover{
+    transform: scale(1.3);
+}
+
+.facebook :hover{
+    transform: scale(1.3);
+}
+
+.twitter :hover{
+    transform: scale(1.3);
+}
+
+.CI {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 49px;
+}
+
+
+
+
+/******** - PAGE MENTIONS LEGALES - *********/
+/******** TITLE *********/
+.h1Mention{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 6em;
+}
+
+/******** SOUS-TITLE *********/
+
+.h3Mention{
+    padding: 2em;
+}
+
+/******** CONTENT *********/
+/****** SECTION ONE ******/
+.sectionMentionOne{
+    padding: 2em;
+}
+
+.sectionMentionOne > article {
+    padding: 2em;
+}
+
+.sectionMentionOne > article > h2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    font-family: 'Almendra Display', cursive;
+    font-size: 3em;
+    
+}
+
+.sectionMentionOne > article > p{
+    padding: 1em;
+}
+
+/****** SECTION TWO ******/
+
+.sectionMentionTwo {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sectionMentionTwo > article{
+    padding: 2em;
+}
+
+.sectionMentionTwo > article > h2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: 'Almendra Display', cursive;
+    font-size: 3em;
+}
+
+.sectionMentionTwo > article > p {
+    padding: 1em;
+}
+
+
+
+
+
+/******** FOOTER *********/
+
+.footer {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: baseline;
+
+    background-color: rgb(69, 70, 75);
+    color: rgb(255, 235, 205);
+
+    font-family: 'Bilbo Swash Caps', cursive;
+    text-align: center;
+    font-size: 30px;
+}
+.footer > ul {
+    display: flex;
+    float: right;
+}
+.footer > ul > li {
+    margin-left: 70px;
+    margin-top: 1em;
+    list-style-type: none;
+    
+    justify-content: end;
+}
+
+
+/******** LOGOS FOOTER  *********/
+
+.logoFooter{
+    margin-top: 0.5em;
+    margin-left: 25em;
+}
+
+.logoFooter > a {
+    margin-right: 3em;
+}
+
+/**** FOOTER RESPONSIVE DESKTOP ****/
+@media screen and (max-width: 1024px) { 
+    
+    .logoFooter {
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .footer > ul{
+        font-size: 20px;
+    }
+}
+
+/**** FOOTER RESPONSIVE TABLET ****/
+@media screen and (max-width: 768px) { 
+    
+    .logoFooter {
+        margin-left: 30px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .footer > ul{
+        font-size: 19px;
+    }
+
+    .footer > ul > li{
+        margin-left: 40px;
+    }
+}
+
+

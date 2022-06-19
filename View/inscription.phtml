@@ -1,0 +1,38 @@
+<!--TITLE-->
+<h1 class="h1Contact">Venez vous aussi rejoindre l'aventure !</h1>
+
+    
+<!--FORMULAIRE CONTACT-->
+<h2 class="h1Inscription">Pour cela, tu as besoin de ton futur pseudo, un email valide et un mot de passe.</h2>
+<section class="formContact formInscription">
+    <form action="/?page=inscription" method="post">
+        <div>
+            <label for="Pseudo">Pseudo :</label>
+            <?php if (isset($errors) && in_array(Users::NAME_INVALID, $errors)): ?>
+                        <div class="alert" role="alert">
+                            Le nom est invalide
+                        </div>
+                    <?php endif ?>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="mail">Email :</label>
+            <?php if (isset($errors) && in_array(Users::EMAIL_INVALID, $errors)): ?>
+                        <div class="alert" role="alert">
+                            L'email est invalide
+                        </div>
+                    <?php endif ?>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Mot de passe:</label>
+            <?php if (isset($errors) && in_array(Users::PASSWORD_INVALID, $errors)): ?>
+                        <div class="alert" role="alert">
+                            L'email est invalide
+                        </div>
+                    <?php endif ?>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit" id="buttonForm" href="View\profil.phtml?=id=">Je m'inscris</button>
+    </form>
+</section>

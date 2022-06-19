@@ -1,0 +1,32 @@
+<!--TITLE-->
+<h1 class="h1Contact">Bon retour parmis nous !</h1>
+    
+<!--FORMULAIRE CONTACT-->
+<section class="formContact">
+    <form action="/?page=connexion" method="post">
+        <div>
+            <label for="mail">Email :</label>
+            <?php if (isset($errors) && in_array(Users::EMAIL_INVALID, $errors)): ?>
+                        <div class="alert" role="alert">
+                            Veuillez renseigner votre email
+                        </div>
+                    <?php endif ?>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="password">Mot de passe:</label>
+            <?php if (isset($errors) && in_array(Users::PASSWORD_INVALID, $errors)): ?>
+                        <div class="alert" role="alert">
+                            Veuillez renseigner votre mot de passe
+                        </div>
+                    <?php endif ?>
+            <input type="password"  name="password">
+        </div>
+        <button type="submit" id="buttonForm">Connexion</button>
+    </form>
+</section>
+
+<section class="redirectInscription">
+    <p>Vous ne possédez pas encore de compte ? Inscrivez vous</p>
+    <p><a href="/?page=inscription"> ici </a></p>
+</section>

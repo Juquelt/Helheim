@@ -1,0 +1,25 @@
+<!--TITLE-->
+<h1 class="MenuH1">Bienvenue à toi, <?= $_SESSION['auth']['name'] ?>.</h1>
+
+<section class="sectionProfil">
+    <h2>Voici ta page profil. Ici, tu pourras avoir accès à tes informations.</h2>
+
+    <div class="userList">
+        <?php foreach($manager->getListUsers() as $User) {
+            echo '
+            <table>
+                <tbody>
+                    <tr>
+                        <td> Mon pseusdo : ',$_SESSION['auth']['name'],'</td>
+                        <td> Mon adresse email : ',$_SESSION['auth']['email'],'</td>
+                    </tr>
+                </tbody>
+            </table>
+            ';
+        }
+        ?>
+
+        <h3>Attention, ne donne pas tes informations personnelles !</h3>
+    </div>
+</section>
+
